@@ -6,7 +6,7 @@ export const founder: TeamMember = {
   role: "Founder & Consultant",
   image: withBasePath("/images/team/frank-pfp.jpeg"),
   email: "frank@afriqueadvisors.ca",
-  linkedinUrl: "https://www.linkedin.com/in/frank-tawiah-mba-cfa-54521119/",
+  linkedinUrl: "https://www.linkedin.com/in/frank-tawiah-mba-cfa-54521119",
   bio: [
     "Frank founded Afrique Advisors Canada Inc. in 2021 to give small businesses and international entrants practical help with setup, compliance and finance in Canada.",
     "He holds an MBA from the Schulich School of Business at York University and is a CFA charterholder, with a background in financial markets, regulatory consulting and teaching.",

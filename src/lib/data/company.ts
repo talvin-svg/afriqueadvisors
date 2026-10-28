@@ -18,7 +18,7 @@ export const companyInfo: CompanyInfo = {
   email: "info@afriqueadvisors.ca",
   founderEmail: "frank@afriqueadvisors.ca",
   socialLinks: {
-    linkedin: "https://www.linkedin.com/in/frank-tawiah-mba-cfa-54521119/",
+    linkedin: "https://www.linkedin.com/in/frank-tawiah-mba-cfa-54521119",
   },
 };
 
@@ -29,6 +29,26 @@ export const sisterCompany = {
   region: "Accra, Ghana",
   description:
     "Investment advisory and blockchain education across African markets. Together, the two firms support capital, products and people moving between Africa and North America.",
+};
+
+export const web3Focus = {
+  intro:
+    "Afrique Advisors Canada Inc. (AACI) is a strong advocate for leveraging blockchain and Web3 technologies to drive:",
+  items: [
+    { title: "Financial inclusion and transparency" },
+    { title: "Institutional adoption of digital assets" },
+    { title: "Tokenized capital markets" },
+    {
+      title: "A Canadian dollar-backed stablecoin",
+      description:
+        "Supporting ventures seeking regulatory approval for a CAD-backed stablecoin, for cross-border payments for SMEs and lower-fee remittances for Canadian residents.",
+    },
+    {
+      title: "Responsible virtual-asset education",
+      description:
+        "Developing curriculum and manuals to help promote responsible virtual-asset use in Canadian minority communities.",
+    },
+  ],
 };
 
 export const credentials = ["Operating since 2021", "Based in Ontario", "CFA", "MBA", "2 practice areas"];
