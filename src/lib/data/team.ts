@@ -4,7 +4,7 @@ import { withBasePath } from "@/lib/utils/withBasePath";
 export const founder: TeamMember = {
   name: "Frank Tawiah, MBA, CFA",
   role: "Founder & Consultant",
-  image: withBasePath("/images/team/frank-pfp.jpeg"),
+  image: withBasePath("/images/team/frank-tawiah.jpg"),
   email: "frank@afriqueadvisors.ca",
   linkedinUrl: "https://www.linkedin.com/in/frank-tawiah-mba-cfa-54521119",
   bio: [

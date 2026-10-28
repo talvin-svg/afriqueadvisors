@@ -60,10 +60,10 @@ export function HeroSection() {
           <Image
             src={founder.image}
             alt={founder.name}
-            width={400}
-            height={400}
+            width={960}
+            height={1200}
             priority
-            className="h-60 w-full rounded-xl object-cover md:h-48 md:w-48 md:shrink-0 lg:h-[300px] lg:w-full lg:rounded-[14px]"
+            className="h-60 w-full rounded-xl object-cover object-[40%_28%] md:h-48 md:w-48 md:shrink-0 lg:h-[300px] lg:w-full lg:rounded-[14px]"
           />
           <div className="flex flex-col gap-[18px] px-1 pb-1 md:p-0 lg:gap-[22px]">
             <div className="flex flex-col gap-1">
