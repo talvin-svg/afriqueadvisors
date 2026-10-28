@@ -30,8 +30,8 @@ export default function AboutPage() {
           <Image
             src={founder.image}
             alt={founder.name}
-            width={400}
-            height={500}
+            width={960}
+            height={1200}
             className="aspect-[4/5] w-full rounded-[20px] border border-line object-cover lg:rounded-3xl"
           />
           <KenteDivider />

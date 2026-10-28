@@ -5,6 +5,7 @@ const paths = {
   growth: "M3 17l6-6 4 4 8-8M15 7h6v6",
   house: "M4 20V10l8-6 8 6v10M9 20v-6h6v6",
   chart: "M4 20h16M7 20v-7M12 20V6M17 20v-10",
+  block: "M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3zM4 7.5l8 4.5 8-4.5M12 12v9",
 } as const;
 
 export type IconName = keyof typeof paths;
