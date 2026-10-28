@@ -1,3 +1,4 @@
+import type { IconName } from "@/components/shared/Icon";
 import { CompanyInfo } from "@/types/company-info";
 
 export const companyInfo: CompanyInfo = {
@@ -76,7 +77,7 @@ export const differentiators = [
   },
 ];
 
-export const audiences = [
+export const audiences: { icon: IconName; title: string; description: string; href?: string }[] = [
   {
     icon: "building" as const,
     title: "Canadian small businesses",
@@ -94,6 +95,13 @@ export const audiences = [
     title: "Founders & growing SMEs",
     description:
       "Entrepreneurs preparing business plans, financial models and funding or grant applications.",
+  },
+  {
+    icon: "block" as const,
+    title: "Blockchain & Web3 ventures",
+    description:
+      "Digital-asset, tokenization and stablecoin projects working towards regulatory approval and responsible adoption in Canada.",
+    href: "/#blockchain",
   },
 ];
 
