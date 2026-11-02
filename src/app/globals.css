@@ -16,8 +16,16 @@
   --color-error: #F28B82;
   --color-success: #7FCB9A;
 
+  /* Paper: warm cream sections with ink text */
+  --color-paper: #F3ECE2;
+  --color-paper-2: #EAE1D4;
+  --color-paper-line: #D6CABA;
+  --color-paper-muted: #5E554D;
+  --color-paper-accent: #A04B1C;
+
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-fraunces), ui-serif, Georgia, serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
 
   --ease-calm: cubic-bezier(0.2, 0.6, 0.2, 1);
 }
@@ -151,11 +159,23 @@ body {
 }
 
 @utility text-eyebrow {
+  font-family: var(--font-mono);
   font-size: 0.8125rem;
   line-height: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
+  font-weight: 500;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+/* Small ledger label: mono, uppercase, tabular figures */
+@utility text-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-variant-numeric: tabular-nums;
 }
 
 /* Kente / adinkra line motif: outlined diamonds with a solid centre, 32 x 16 tile */
@@ -168,4 +188,17 @@ body {
 .bg-kente-dark {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='16'%3E%3Cpath d='M0 8 L8 0 L16 8 L8 16 Z M16 8 L24 0 L32 8 L24 16 Z' fill='none' stroke='%23121010' stroke-width='1'/%3E%3Cpath d='M8 5 L11 8 L8 11 L5 8 Z M24 5 L27 8 L24 11 L21 8 Z' fill='%23121010'/%3E%3C/svg%3E");
   background-size: 32px 16px;
+}
+
+/* Ledger grid: hairline gold grid, faded towards the edges */
+.bg-ledger {
+  background-image:
+    linear-gradient(to right, rgb(233 185 73 / 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(233 185 73 / 0.1) 1px, transparent 1px);
+  background-size: 48px 48px;
+  background-position: -1px -1px;
+}
+
+.bg-ledger-fade {
+  mask-image: radial-gradient(ellipse at top right, black 10%, transparent 70%);
 }

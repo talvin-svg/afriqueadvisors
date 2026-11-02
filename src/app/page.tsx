@@ -5,6 +5,7 @@ import { HeroSection } from "@/components/home/HeroSection";
 import { ProcessSection } from "@/components/home/ProcessSection";
 import { ServicesPreviewSection } from "@/components/home/ServicesPreviewSection";
 import { SisterCompanySection } from "@/components/home/SisterCompanySection";
+import { Web3Section } from "@/components/home/Web3Section";
 import { WhyUsSection } from "@/components/home/WhyUsSection";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <ServicesPreviewSection />
       <WhyUsSection />
       <ProcessSection />
+      <Web3Section />
       <SisterCompanySection />
       <CTASection />
     </>

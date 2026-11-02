@@ -1,7 +1,6 @@
 "use client";
 
 import { Eyebrow } from "@/components/shared/Eyebrow";
-import { KenteCorner } from "@/components/shared/Kente";
 import { motion } from "framer-motion";
 
 export function PageHeader({
@@ -19,7 +18,7 @@ export function PageHeader({
 }) {
   return (
     <section className="relative">
-      <KenteCorner className="h-28 w-[200px] md:h-48 md:w-[480px]" />
+      <div aria-hidden="true" className="bg-ledger bg-ledger-fade pointer-events-none absolute inset-0" />
       <motion.div
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
