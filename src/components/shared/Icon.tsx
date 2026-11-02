@@ -28,9 +28,9 @@ export function IconTile({ name }: { name: IconName }) {
   );
 }
 
-export function ArrowRight({ className = "h-[18px] w-[18px]" }: { className?: string }) {
+export function ArrowRight({ className = "h-[18px] w-[18px]", color = "#E9B949" }: { className?: string; color?: string }) {
   return (
-    <svg aria-hidden="true" className={className} viewBox="0 0 24 24" fill="none" stroke="#E9B949" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg aria-hidden="true" className={className} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M5 12h14M13 6l6 6-6 6" />
     </svg>
   );

@@ -1,6 +1,5 @@
+import { Em } from "@/components/shared/Em";
 import { Eyebrow } from "@/components/shared/Eyebrow";
-import { Diamond } from "@/components/shared/Icon";
-import { KenteCorner, KenteDivider } from "@/components/shared/Kente";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { Reveal } from "@/components/shared/Reveal";
 import { buttonStyles } from "@/components/shared/buttonStyles";
@@ -20,7 +19,7 @@ export default function AboutPage() {
     <>
       <PageHeader
         eyebrow="About"
-        title="Practical help with setup, compliance and finance in Canada"
+        title={<>Practical help with setup, compliance and <Em>finance in Canada</Em></>}
         description="Afrique Advisors Canada Inc. is an Ontario-based management and financial consulting firm, founded in 2021."
       />
 
@@ -34,7 +33,10 @@ export default function AboutPage() {
             height={1200}
             className="aspect-[4/5] w-full rounded-[20px] border border-line object-cover lg:rounded-3xl"
           />
-          <KenteDivider />
+          <p className="flex justify-between border-t border-line pt-3 text-label text-muted">
+            <span>{founder.name}</span>
+            <span className="text-gold">Est. {companyInfo.founded}</span>
+          </p>
         </Reveal>
         <Reveal delay={0.06} className="flex flex-col gap-8 lg:gap-10">
           <div className="flex flex-col gap-2.5">
@@ -50,13 +52,13 @@ export default function AboutPage() {
           </div>
           <div className="flex flex-col gap-5">
             <h3 className="font-serif text-2xl leading-[30px] font-medium">Qualifications</h3>
-            <ul className="grid gap-3 lg:grid-cols-2 lg:gap-4">
-              {founder.qualifications.map((q) => (
-                <li key={q.title} className="flex items-start gap-3.5 rounded-2xl border border-line bg-surface px-[22px] py-5">
-                  <Diamond className="mt-2 h-2.5 w-2.5" />
-                  <div className="flex flex-col gap-0.5">
+            <ul className="border-t border-line">
+              {founder.qualifications.map((q, i) => (
+                <li key={q.title} className="grid grid-cols-[44px_minmax(0,1fr)] items-baseline border-b border-line py-4">
+                  <span className="text-label text-gold">{String(i + 1).padStart(2, "0")}</span>
+                  <div className="flex flex-col gap-0.5 md:flex-row md:items-baseline md:justify-between md:gap-6">
                     <span className="font-semibold">{q.title}</span>
-                    {q.detail && <span className="text-sm leading-[22px] text-muted">{q.detail}</span>}
+                    {q.detail && <span className="text-sm leading-[22px] text-muted md:text-right">{q.detail}</span>}
                   </div>
                 </li>
               ))}
@@ -76,14 +78,14 @@ export default function AboutPage() {
       </section>
 
       {/* Mission and vision */}
-      <section className="border-y border-line bg-surface">
-        <div className="container-page section-y grid gap-4 md:grid-cols-2 md:gap-6">
+      <section className="bg-paper text-ink">
+        <div className="container-page section-y grid gap-10 md:grid-cols-2 md:gap-0 md:divide-x md:divide-paper-line">
           {[
             { label: "Mission", text: companyInfo.mission },
             { label: "Vision", text: companyInfo.vision },
           ].map((item, i) => (
-            <Reveal key={item.label} delay={i * 0.06} className="flex flex-col gap-[22px] rounded-[20px] border border-line bg-ink p-7 md:p-10 lg:rounded-3xl lg:p-12">
-              <Eyebrow>{item.label}</Eyebrow>
+            <Reveal key={item.label} delay={i * 0.06} className="flex flex-col gap-[22px] md:px-10 md:first:pl-0 md:last:pr-0 lg:px-14">
+              <Eyebrow className="text-paper-accent">{item.label}</Eyebrow>
               <p className="font-serif text-[22px] leading-[30px] md:text-2xl md:leading-[34px] lg:text-[28px] lg:leading-[38px]">{item.text}</p>
             </Reveal>
           ))}
@@ -93,7 +95,7 @@ export default function AboutPage() {
       {/* Closing panel */}
       <section className="container-page section-y">
         <Reveal className="relative flex flex-col items-start gap-8 overflow-hidden rounded-[20px] border border-line bg-surface-2 p-7 md:p-12 lg:flex-row lg:items-center lg:justify-between lg:gap-10 lg:rounded-3xl lg:p-14">
-          <KenteCorner className="hidden h-28 w-80 md:block" />
+          <div aria-hidden="true" className="bg-ledger bg-ledger-fade pointer-events-none absolute inset-0 hidden md:block" />
           <div className="relative flex max-w-[660px] flex-col gap-3.5">
             <h2 className="font-serif text-3xl leading-9 font-medium lg:text-4xl lg:leading-[42px]">Start with a conversation</h2>
             <p className="text-lg leading-[29px] text-muted">

@@ -1,5 +1,6 @@
 import { ContactForm } from "@/components/shared/ContactForm";
 import { ArrowUpRight } from "@/components/shared/Icon";
+import { Em } from "@/components/shared/Em";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { companyInfo } from "@/lib/data/company";
 import type { Metadata } from "next";
@@ -20,7 +21,7 @@ export default function ContactPage() {
     <>
       <PageHeader
         eyebrow="Contact"
-        title="Book a consultation"
+        title={<>Book a <Em>consultation</Em></>}
         description="Tell us about your business. Every engagement starts with a conversation about where your business is today, your obligations and goals."
       />
 
@@ -32,7 +33,7 @@ export default function ContactPage() {
           <ul className="grid border-t border-line md:grid-cols-3 md:gap-x-6 lg:grid-cols-1">
             {contactMethods.map((method) => (
               <li key={method.label} className="flex flex-col gap-1 border-b border-line py-5">
-                <span className="text-eyebrow text-gold">{method.label}</span>
+                <span className="text-label text-gold">{method.label}</span>
                 <a href={method.href} className="break-words text-lg leading-7 transition-colors hover:text-gold">
                   {method.value}
                 </a>
@@ -40,7 +41,7 @@ export default function ContactPage() {
             ))}
             {companyInfo.socialLinks.linkedin && (
               <li className="flex flex-col gap-1 border-b border-line py-5 md:col-span-3 lg:col-span-1">
-                <span className="text-eyebrow text-gold">LinkedIn</span>
+                <span className="text-label text-gold">LinkedIn</span>
                 <a
                   href={companyInfo.socialLinks.linkedin}
                   target="_blank"

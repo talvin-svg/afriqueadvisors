@@ -3,7 +3,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { MotionProvider } from "@/components/shared/MotionProvider";
 import { companyInfo } from "@/lib/data/company";
 import type { Metadata } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Fraunces, IBM_Plex_Mono, Inter } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -17,6 +17,13 @@ const fraunces = Fraunces({
   subsets: ["latin"],
   style: ["normal", "italic"],
   axes: ["opsz"],
+});
+
+// Ledger-style labels, figures and step markers
+const plexMono = IBM_Plex_Mono({
+  variable: "--font-plex-mono",
+  subsets: ["latin"],
+  weight: ["400", "500"],
 });
 
 export const metadata: Metadata = {
@@ -43,7 +50,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-CA" className={`${inter.variable} ${fraunces.variable}`}>
+    <html lang="en-CA" className={`${inter.variable} ${fraunces.variable} ${plexMono.variable}`}>
       <body className="font-sans antialiased bg-ink text-fg">
         <MotionProvider>
           <Navbar />
